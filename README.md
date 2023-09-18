@@ -1,3 +1,3 @@
 # Eduard-Projects 
 
-This is where i work on diffrent projects for school or personal.
+This is where i work on school or personal projects.
