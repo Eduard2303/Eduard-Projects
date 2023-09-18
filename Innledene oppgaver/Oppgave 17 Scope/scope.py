@@ -27,8 +27,8 @@ def hovedprogram():
 
     print (b) 
     print (a)  
-# vi lager variabel a og b. A er verdi 42 og b er verdi 0.
-# Vi gir verdi b veriden a som er 42 nå er b 42. og vi gjør a om til min funksjon som 
+# Vi lager variabel a og b. A er verdi 42 og b er verdi 0.
+# Vi gir variabel b veriden til a som er 42 nå er b 42. Og vi gjør a om til min funksjon som 
 # returnere 13. b er 42 a er 13.
      
 

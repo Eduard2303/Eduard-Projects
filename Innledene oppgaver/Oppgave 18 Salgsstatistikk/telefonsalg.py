@@ -10,18 +10,19 @@ def salg(filnavn):
 
 ordbok = salg(salgstall)
 
-print(ordbok)
-
 
 def maanedensSalgsPerson(ordbok):
-    høyest = ""
+    høyestverdi = 0
+    høyestperson = ""
     for person in ordbok:
-        if høyest == "0":
-            høyest = ordbok.get(person)    
+        if høyestverdi == 0:
+            høyestverdi = ordbok.get(person)
+            høyestperson = person    
         else:    
-            if ordbok.get(person) > høyest:
-                høyest = ordbok.get(person)
-    return høyest
+            if ordbok.get(person) > høyestverdi:
+                høyestverdi = ordbok.get(person)
+                høyestperson = person
+    return høyestperson,høyestverdi
 
 def totaltAntallSalg(ordbok):
     total = 0
@@ -32,7 +33,10 @@ def totaltAntallSalg(ordbok):
 def gjennomsnittSalg(ordbok):
     return totaltAntallSalg(ordbok) / len(ordbok)
 
-print(f"Total er {totaltAntallSalg(ordbok)}")
-print(f"{maanedensSalgsPerson(ordbok)}")
-print(f"{gjennomsnittSalg(ordbok)}")
+def hovedprogram(ordbok):
+    print(f"Månends salgs person er {maanedensSalgsPerson(ordbok)[0]} med {maanedensSalgsPerson(ordbok)[1]} salg.")
+    print(f"Aktive slegere denne måneden: {len(ordbok)} Totalt antall salg: {totaltAntallSalg(ordbok)}")
+    print(f"Gjennomsnittlig salg per person er {gjennomsnittSalg(ordbok)}")
+
+hovedprogram(ordbok)
 
