@@ -12,13 +12,12 @@ reiseplan = [reisested,klesplagg,avreisedato]
 for x in reiseplan:
     print(x)
 
-while True:
-    i1 = int(input(f"velg liste tall mellom 0 og 2 "))
-    i2 = int(input(f"velg element tall mellom 0 og 4 "))
+i1 = int(input(f"velg liste tall mellom 0 og 2 "))
+i2 = int(input(f"velg element tall mellom 0 og 4 "))
 
-    if 0 <= i1 <= 2 and 0 <= i2 <= 4:
-        print(f"{reiseplan[i1][i2]} {i1},{i2}")
-    else:
-        print("Ugyldig Iutput!")
+if 0 <= i1 <= 2 and 0 <= i2 <= 4:
+    print(f"{reiseplan[i1][i2]} {i1},{i2}")
+else:
+    print("Ugyldig Iutput!")
 
 
